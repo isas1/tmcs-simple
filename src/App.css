@@ -26,7 +26,7 @@ body {
   background-color: #FFF;
   padding: 20px;
   }
-  .content h2 {
+  .content h2, iframe {
   padding: 0;
   margin: 0;
   }
@@ -36,3 +36,4 @@ body {
   ul.header .active {
     background-color: darkcyan;
     }
+  

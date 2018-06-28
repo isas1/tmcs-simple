@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import {
   Route,
   NavLink,
-  HashRouter
+  BrowserRouter
 } from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
@@ -13,7 +13,7 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <HashRouter>
+      <BrowserRouter>
         <div>
           <h1>TMCS SPA</h1>
           <ul className="header">
@@ -27,7 +27,7 @@ class App extends Component {
             <Route path="/contact" component={Contact}/>
           </div>
         </div>
-      </HashRouter>
+      </BrowserRouter>
     );
   }
 }
