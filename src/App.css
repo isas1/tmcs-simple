@@ -22,9 +22,6 @@ body {
   padding: 20px;
   display: inline-block;
   }
-  ul.header li a:active {
-    background-color: cadetblue;
-  }
   .content {
   background-color: #FFF;
   padding: 20px;
