@@ -9,6 +9,7 @@ import About from "./About";
 import Contact from "./Contact";
 import './App.css';
 import Typewriter from "./Typewriter";
+import Logo from "./Logo/logo.jsx";
 
 
 class App extends Component {
@@ -16,7 +17,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div>
-          <h1><Typewriter /></h1>
+          <h1><span><Logo /></span><Typewriter /></h1>
           <ul className="header">
             <li><NavLink exact to="/">Home</NavLink></li>
             <li><NavLink to="/about">About</NavLink></li>
