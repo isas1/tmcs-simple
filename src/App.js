@@ -8,6 +8,7 @@ import Home from "./Home";
 import About from "./About";
 import Contact from "./Contact";
 import './App.css';
+import Typewriter from "./Typewriter";
 
 
 class App extends Component {
@@ -15,7 +16,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div>
-          <h1>TMCS SPA</h1>
+          <h1><Typewriter /></h1>
           <ul className="header">
             <li><NavLink exact to="/">Home</NavLink></li>
             <li><NavLink to="/about">About</NavLink></li>
