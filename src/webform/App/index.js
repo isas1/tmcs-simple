@@ -3,7 +3,7 @@ import React, { Component, Fragment } from 'react';
 import WebForm from '../components/scenes/WebForm';
 import WebSubmission from '../components/scenes/WebSubmission';
 
-class App extends Component {
+class WForm extends Component {
   state = {
     formData: {},
     sceneToDisplay: 'form'
@@ -30,4 +30,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default WForm;

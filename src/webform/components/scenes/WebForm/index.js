@@ -7,7 +7,7 @@ import {
   MAX_CHARACTERS,
   NO_AMOUNT_VALUE,
   PERSON_TITLES
-} from 'src/core/constants';
+} from '../../../core/constants';
 
 import FormHeader from './form-components/FormHeader';
 import InvalidFields from './form-components/InvalidFields';
@@ -72,7 +72,6 @@ class WebForm extends Component {
         isEmailValid &&
         isFirstNameValid &&
         isLastNameValid &&
-        isPassportIdValid &&
         isTitleValid
     });
   };
