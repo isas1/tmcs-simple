@@ -1,0 +1,28 @@
+.submit-button input {
+  background-color: #5995da;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 40px;
+}
+
+.submit-button input:hover {
+  background-color: #76aeed;
+}
+
+.submit-button input:active {
+  background-color: #407fc7;
+}
+
+.submit-button.disabled input {
+  background: lightgrey;
+}
+
+@media only screen and (min-width: 700px) {
+  .submit-button input {
+    margin-left: 120px;
+  }
+}

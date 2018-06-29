@@ -1,0 +1,40 @@
+.fieldset-form-row {
+  border: none;
+  margin-bottom: 40px;
+}
+
+.fieldset-form-row legend {
+  margin-bottom: 15px;
+}
+
+.fieldset-form-row label {
+  display: block;
+  font-size: 14px;
+  padding: 0 20px 0 10px;
+}
+
+.fieldset-form-row input {
+  margin-top: 2px;
+}
+
+.fieldset-form-row input,
+.fieldset-form-row label {
+  float: left;
+}
+
+.fieldset-form-row.invalid label {
+  color: #d55c5f;
+}
+
+@media only screen and (min-width: 700px) {
+  .fieldset-form-row {
+    margin-bottom: 10px;
+  }
+
+  .fieldset-form-row legend {
+    float: left;
+    padding-right: 20px;
+    text-align: right;
+    width: 120px;
+  }
+}

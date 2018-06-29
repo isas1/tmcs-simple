@@ -1,0 +1,21 @@
+.text-input input {
+  background-color: #fff;
+  border: 1px solid #d6d9dc;
+  border-radius: 3px;
+  font-size: 14px;
+  padding: 7px;
+  width: 100%;
+}
+
+.text-input.invalid input {
+  border: 1px solid #d55c5f;
+  box-shadow: none;
+  color: #d55c5f;
+}
+
+@media only screen and (min-width: 700px) {
+  .text-input input {
+    height: initial;
+    width: 250px;
+  }
+}

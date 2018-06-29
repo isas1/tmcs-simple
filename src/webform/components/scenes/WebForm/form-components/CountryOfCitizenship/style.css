@@ -1,0 +1,22 @@
+.country-of-citizenship select {
+  background: #fff;
+  border: 1px solid #d6d9dc;
+  border-radius: 3px;
+  box-shadow: none;
+  font-size: 14px;
+  height: 33px;
+  width: 100%;
+}
+
+.country-of-citizenship.invalid select {
+  border: 1px solid #d55c5f;
+  box-shadow: none;
+  color: #d55c5f;
+}
+
+@media only screen and (min-width: 700px) {
+  .country-of-citizenship select {
+    height: 33px;
+    width: 250px;
+  }
+}

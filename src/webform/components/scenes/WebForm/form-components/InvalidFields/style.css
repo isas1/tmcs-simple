@@ -1,0 +1,30 @@
+.invalid-fields {
+  border: #d55c5f 1px solid;
+  color: #d55c5f;
+  margin-bottom: 40px;
+  padding: 20px;
+}
+
+.invalid-fields h3 {
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.invalid-fields li {
+  margin-bottom: 10px;
+  padding-left: 10px;
+  position: relative;
+}
+
+.invalid-fields li:before {
+  content: '•';
+  left: 0;
+  position: absolute;
+}
+
+@media only screen and (min-width: 700px) {
+  .invalid-fields {
+    margin-bottom: 20px;
+  }
+}
