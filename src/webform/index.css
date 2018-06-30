@@ -132,7 +132,7 @@ html,
 body {
   min-width: 320px;
   font-family: Helvetica, sans-serif;
-  background: #f7f7f7;
+  background: #fff;
 }
 
 body {
@@ -213,6 +213,6 @@ h6 {
 
 html,
 body {
-  background-color: #eaedf0;
+  background-color: #fff;
   color: #5d6063;
 }

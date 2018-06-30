@@ -2,7 +2,8 @@ import logo from "./cslogo.png";
 import React from "react";
 
 const styles = {
-  maxHeight: "25px"
+  height: "1%",
+  maxHeight: "70px"
 }
 
 const Logo = () => {

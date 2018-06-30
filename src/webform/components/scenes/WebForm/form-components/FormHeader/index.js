@@ -4,10 +4,8 @@ import './style.css';
 
 const FormHeader = () => (
   <header className="business-form-header">
-    <h1>Business Submission</h1>
-    <p>
-      <em>Please fill out this form.</em>
-    </p>
+    <h1>Or...</h1>
+      <em>Just fill out the form below.</em>
   </header>
 );
 
