@@ -11,7 +11,6 @@ import {
 
 import FormHeader from './form-components/FormHeader';
 import InvalidFields from './form-components/InvalidFields';
-import PassportId from './form-components/PassportId';
 import RadioGroup from './form-components/RadioGroup';
 import CountryOfCitizenship from './form-components/CountryOfCitizenship';
 import SubmitButton from './form-components/SubmitButton';
@@ -62,7 +61,6 @@ class WebForm extends Component {
       [FORM_TEXTS.email.name]: isEmailValid,
       [FORM_TEXTS.firstName.name]: isFirstNameValid,
       [FORM_TEXTS.lastName.name]: isLastNameValid,
-      [FORM_TEXTS.passportId.name]: isPassportIdValid,
       [FORM_TEXTS.title.name]: isTitleValid
     } = areFormValuesValid;
 
@@ -92,7 +90,7 @@ class WebForm extends Component {
     );
   };
 
-  handleCountryChange = ({ name, passportIdName, selectedIndex, value }) => {
+  handleCountryChange = ({ name, selectedIndex, value }) => {
     this.setState(
       prevState => ({
         areFormValuesValid: {
@@ -101,9 +99,7 @@ class WebForm extends Component {
         },
         formValues: {
           ...prevState.formValues,
-          [name]: value,
-          [passportIdName]:
-            value === NO_AMOUNT_VALUE ? '' : prevState[passportIdName]
+          [name]: value
         },
         selectedCountry: value,
         selectedCountryIndex: selectedIndex
@@ -174,32 +170,19 @@ class WebForm extends Component {
       [FORM_TEXTS.email.name]: isEmailValid,
       [FORM_TEXTS.firstName.name]: isFirstNameValid,
       [FORM_TEXTS.lastName.name]: isLastNameValid,
-      [FORM_TEXTS.passportId.name]: isPassportIdValid,
       [FORM_TEXTS.title.name]: isTitleValid
     } = areFormValuesValid;
 
     const {
       [FORM_TEXTS.email.name]: email,
       [FORM_TEXTS.firstName.name]: firstName,
-      [FORM_TEXTS.lastName.name]: lastName,
-      [FORM_TEXTS.passportId.name]: passportId
+      [FORM_TEXTS.lastName.name]: lastName
     } = formValues;
 
     return (
       <div className="web-form">
         <FormHeader />
         <form onSubmit={this.handleSubmit}>
-          <RadioGroup
-            className="person-title"
-            isSubmitClicked={isSubmitClicked}
-            isValid={isTitleValid}
-            label={FORM_TEXTS.title.label}
-            name={FORM_TEXTS.title.name}
-            radios={PERSON_TITLES}
-            required
-            selectedValue={selectedTitle}
-            onRadioChange={this.handleTitleChange}
-          />
           <TextInput
             className="first-name"
             isSubmitClicked={isSubmitClicked}
@@ -224,32 +207,7 @@ class WebForm extends Component {
             onEvent={this.checkCanSubmit}
             onTextChange={this.handleInputChange}
           />
-          <CountryOfCitizenship
-            className="country-of-citizenship"
-            isSubmitClicked={isSubmitClicked}
-            isValid={isCountryOfCitizenshipValid}
-            label={FORM_TEXTS.countryOfCitizenship.label}
-            name={FORM_TEXTS.countryOfCitizenship.name}
-            options={COUNTRIES}
-            passportIdName={FORM_TEXTS.passportId.name}
-            required
-            selectedValue={selectedCountry}
-            onEvent={this.checkCanSubmit}
-            onOptionChange={this.handleCountryChange}
-          />
-          {isCountryOfCitizenshipValid && (
-            <PassportId
-              isSubmitClicked={isSubmitClicked}
-              isValid={isPassportIdValid}
-              label={FORM_TEXTS.passportId.label}
-              name={FORM_TEXTS.passportId.name}
-              required
-              value={passportId}
-              validator={COUNTRIES[selectedCountryIndex].validator}
-              onEvent={this.checkCanSubmit}
-              onTextChange={this.handleInputChange}
-            />
-          )}
+          
           <TextInput
             className="email"
             isSubmitClicked={isSubmitClicked}
@@ -260,6 +218,18 @@ class WebForm extends Component {
             required
             type="email"
             value={email}
+            onEvent={this.checkCanSubmit}
+            onTextChange={this.handleInputChange}
+          />
+
+          <TextInput
+            className="message"
+            isSubmitClicked={isSubmitClicked}
+            //label={FORM_TEXTS.email.label}
+            //name={FORM_TEXTS.email.name}
+            required
+            type="text"
+            //value={message}
             onEvent={this.checkCanSubmit}
             onTextChange={this.handleInputChange}
           />

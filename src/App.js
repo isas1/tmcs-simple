@@ -15,7 +15,7 @@ const styles = {
   float: "right",
   display: "inline",
   "list-style-type": "none",
-  margin: 0
+  margin: 0,
 }
 
 class App extends Component {
