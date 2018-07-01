@@ -15,6 +15,7 @@ import RadioGroup from './form-components/RadioGroup';
 import CountryOfCitizenship from './form-components/CountryOfCitizenship';
 import SubmitButton from './form-components/SubmitButton';
 import TextInput from './form-components/TextInput';
+import MessageInput from './form-components/MessageInput';
 import './style.css';
 
 const formNames = Object.keys(FORM_TEXTS).reduce(
@@ -223,13 +224,29 @@ class WebForm extends Component {
           />
 
           <TextInput
+            className="email"
+            isSubmitClicked={isSubmitClicked}
+            isValid={isEmailValid}
+            label={FORM_TEXTS.email.label}
+            maxCharacters={MAX_CHARACTERS}
+            name={FORM_TEXTS.email.name}
+            required
+            type="email"
+            value={email}
+            onEvent={this.checkCanSubmit}
+            onTextChange={this.handleInputChange}
+          />
+
+          <TextInput
             className="message"
             isSubmitClicked={isSubmitClicked}
+            isValid={isEmailValid}
             //label={FORM_TEXTS.email.label}
+            maxCharacters={MAX_CHARACTERS}
             //name={FORM_TEXTS.email.name}
             required
-            type="text"
-            //value={message}
+            type="email"
+            value={email}
             onEvent={this.checkCanSubmit}
             onTextChange={this.handleInputChange}
           />

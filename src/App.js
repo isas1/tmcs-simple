@@ -14,7 +14,6 @@ import Logo from "./Logo/logo.jsx";
 const styles = {
   float: "right",
   display: "inline",
-  "list-style-type": "none",
   margin: 0,
 }
 
