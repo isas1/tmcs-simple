@@ -9,11 +9,12 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import './App.css';
 import Typewriter from "./Typewriter";
-import Logo from "./Logo/logo.jsx";
+import Logo from "./components/Logo/logo.jsx";
 
 const styles = {
   float: "right",
   display: "inline",
+  listStyleType: "none",
   margin: 0,
 }
 
