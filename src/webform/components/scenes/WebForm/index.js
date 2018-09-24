@@ -2,20 +2,16 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import {
-  COUNTRIES,
   FORM_TEXTS,
   MAX_CHARACTERS,
-  NO_AMOUNT_VALUE,
-  PERSON_TITLES
+  NO_AMOUNT_VALUE
 } from '../../../core/constants';
 
 import FormHeader from './form-components/FormHeader';
 import InvalidFields from './form-components/InvalidFields';
-import RadioGroup from './form-components/RadioGroup';
-import CountryOfCitizenship from './form-components/CountryOfCitizenship';
 import SubmitButton from './form-components/SubmitButton';
 import TextInput from './form-components/TextInput';
-import MessageInput from './form-components/MessageInput';
+// import MessageInput from './form-components/MessageInput';
 import './style.css';
 
 const formNames = Object.keys(FORM_TEXTS).reduce(
@@ -160,18 +156,13 @@ class WebForm extends Component {
       areFormValuesValid,
       canSubmit,
       formValues,
-      isSubmitClicked,
-      selectedCountry,
-      selectedCountryIndex,
-      selectedTitle
+      isSubmitClicked
     } = this.state;
 
     const {
-      [FORM_TEXTS.countryOfCitizenship.name]: isCountryOfCitizenshipValid,
       [FORM_TEXTS.email.name]: isEmailValid,
       [FORM_TEXTS.firstName.name]: isFirstNameValid,
       [FORM_TEXTS.lastName.name]: isLastNameValid,
-      [FORM_TEXTS.title.name]: isTitleValid
     } = areFormValuesValid;
 
     const {
@@ -243,7 +234,7 @@ class WebForm extends Component {
             isValid={isEmailValid}
             //label={FORM_TEXTS.email.label}
             maxCharacters={MAX_CHARACTERS}
-            //name={FORM_TEXTS.email.name}
+            // name={FORM_TEXTS.email.name}
             required
             type="email"
             value={email}
