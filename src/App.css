@@ -1,5 +1,11 @@
+:root {
+  --bg: #fff;
+  --sec: #fa6484;
+  --sBlack: #333
+}
+
 body {
-  background-color: #FFCC00;
+  background-color: var(--bg);
   padding: 20px;
   margin: 0;
   }
@@ -12,7 +18,7 @@ body {
   margin: 0;
   }
   ul.header {
-  background-color: #111;
+  background-color: var(--sBlack);
   padding: 0;
   }
   ul.header li a {
@@ -23,7 +29,7 @@ body {
   display: inline-block;
   }
   .content {
-  background-color: #FFF;
+  background-color: var(--bg);
   padding: 20px;
   }
   .content h2, iframe {
@@ -34,6 +40,6 @@ body {
   margin-bottom: 10px;
   }
   ul.header .active {
-    background-color: darkcyan;
+    background-color: var(--sec);
     }
   

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import WForm from "./Webform/App";
+import WForm from "../components/Webform/App";
 
 class Contact extends Component {
   render() {
