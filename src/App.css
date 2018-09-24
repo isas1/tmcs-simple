@@ -4,6 +4,10 @@
   --sBlack: #333
 }
 
+*{
+  color: var(--sBlack);
+}
+
 body {
   background-color: var(--bg);
   padding: 20px;
