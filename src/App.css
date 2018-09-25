@@ -4,7 +4,7 @@
   --sBlack: #333
 }
 
-*{
+* {
   color: var(--sBlack);
 }
 
@@ -12,38 +12,76 @@ body {
   background-color: var(--bg);
   padding: 20px;
   margin: 0;
-  }
-  h1, h2, p, ul, li {
+}
+
+h1,
+h2,
+p,
+ul,
+li {
   font-family: sans-serif;
-  }
-  ul.header li {
+}
+
+ul.header li {
   display: inline;
   list-style-type: none;
   margin: 0;
-  }
-  ul.header {
+}
+
+ul.header {
   background-color: var(--sBlack);
   padding: 0;
-  }
-  ul.header li a {
+}
+
+ul.header li a {
   color: #FFF;
   font-weight: bold;
   text-decoration: none;
   padding: 20px;
   display: inline-block;
-  }
-  .content {
+}
+
+/* ul #logo */
+#logo {
+  float: right;
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+}
+
+.content {
   background-color: var(--bg);
-  padding: 20px;
-  }
-  .content h2, iframe {
+  padding: 20px;  
+}
+
+.fade-enter {
+  opacity: 0.01;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+
+.content h2,
+iframe {
   padding: 0;
   margin: 0;
-  }
-  .content li {
+}
+
+.content li {
   margin-bottom: 10px;
-  }
-  ul.header .active {
-    background-color: var(--sec);
-    }
-  
+}
+
+ul.header .active {
+  background-color: var(--sec);
+}
