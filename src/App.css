@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 :root {
   --bg: #fff;
   --sec: #fa6484;
   --sBlack: #333
 }
 
+/* globals */
 * {
   color: var(--sBlack);
 }
@@ -19,9 +22,27 @@ h2,
 p,
 ul,
 li {
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
+a {
+  color: var(--sec);
+}
+
+h2 {
+  text-decoration: underline;
+  text-decoration-color: var(--sec);
+}
+
+.hl {
+  background-color: var(--sec);
+  font-style: italic;
+  color: #fff;
+  border-radius: 5px;
+  padding: 1px 5px 1px 5px;
+}
+
+/* title and logo */
 ul.header li {
   display: inline;
   list-style-type: none;
@@ -41,6 +62,10 @@ ul.header li a {
   display: inline-block;
 }
 
+ul.header .active {
+  background-color: var(--sec);
+}
+
 /* ul #logo */
 #logo {
   float: right;
@@ -49,11 +74,27 @@ ul.header li a {
   margin: 0;
 }
 
+FontAwesomeIcon {
+  color: var(--sec);
+}
+
+/* navbar */
 .content {
   background-color: var(--bg);
   padding: 20px;  
 }
 
+.content h2,
+iframe {
+  padding: 0;
+  margin: 0;
+}
+
+.content li {
+  margin-bottom: 10px;
+}
+
+/* Global css-transition-group styles - add styled.div if more transitions used */
 .fade-enter {
   opacity: 0.01;
 }
@@ -70,18 +111,4 @@ ul.header li a {
 .fade-exit.fade-exit-active {
   opacity: 0.01;
   transition: opacity 300ms ease-in;
-}
-
-.content h2,
-iframe {
-  padding: 0;
-  margin: 0;
-}
-
-.content li {
-  margin-bottom: 10px;
-}
-
-ul.header .active {
-  background-color: var(--sec);
 }
