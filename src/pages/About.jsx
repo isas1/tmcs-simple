@@ -10,7 +10,7 @@ class About extends Component {
           <li>BSc Computing Graduate (First Class Honours)</li>
           <li>Taught across multiple exam boards: AQA, OCR, Cambridge iGCSE</li>
           <li>Students from 6 - 18</li>
-          <li>100% Success rate to date - students have achieved expected or above in EVER case. </li>
+          <li>100% Success rate to date - EVERY students has achieved expected or better results. </li>
         </ul>
 
         <h2>ABOUT</h2>

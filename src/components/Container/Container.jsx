@@ -16,7 +16,8 @@ function Container({location}) {
         classNames={'fade'}
       >
         <Switch location={location}>
-          <Route exact path="/home" component={Home} />
+          <Route exact path={`/home`} render={ (routerProps) => < Home routerProps={routerProps} />} />
+          <Route exact path={`/`} render={ (routerProps) => < Home routerProps={routerProps} />} />
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
         </Switch>
