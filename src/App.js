@@ -17,7 +17,7 @@ class App extends Component {
         <ul id="logo">
           <li><Logo /> </li>
         </ul>   
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
           <div>
           <h1><Typewriter /></h1>
             <Header />
