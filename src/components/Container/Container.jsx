@@ -16,10 +16,11 @@ function Container({location}) {
         classNames={'fade'}
       >
         <Switch location={location}>
-          <Route exact path={`/home`} render={ (routerProps) => < Home routerProps={routerProps} />} />
+          {/* <Route exact path={process.env.PUBLIC_URL + '/tmcs-hosted2'} render={ (routerProps) => < Home routerProps={routerProps} />} /> */}
+          <Route exact path={process.env.PUBLIC_URL + '/tmcs-hosted2'} component={Home} />
           {/* <Route exact path={`/`} render={ (routerProps) => < Home routerProps={routerProps} />} /> */}
-          <Route path="/about" component={About} />
-          <Route path="/contact" component={Contact} />
+          <Route path={process.env.PUBLIC_URL + "/tmcs-hosted2/about"} component={About} />
+          <Route path={process.env.PUBLIC_URL + "/tmcs-hosted2/contact"} component={Contact} />
         </Switch>
       </CSSTransition>
     </TransitionGroup>
