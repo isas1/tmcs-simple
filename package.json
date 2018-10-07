@@ -2,7 +2,7 @@
   "name": "tmcs-simple",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://isas1.github.io/tmcs-hosted2/home",
+  "homepage": "https://isas1.github.io/tmcs-hosted2",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.4",
     "@fortawesome/free-solid-svg-icons": "^5.3.1",
