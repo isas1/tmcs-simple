@@ -10,15 +10,18 @@
     "dotenv": "^6.0.0",
     "gh-pages": "^2.0.0",
     "i": "^0.3.6",
+    "merge": "^1.2.1",
     "npm": "^6.4.1",
     "react": "^16.4.1",
+    "react-dev-utils": "^7.0.1",
     "react-dom": "^16.4.1",
     "react-icons": "^3.1.0",
     "react-iframe": "^1.2.0",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
     "react-transition-group": "^2.4.0",
-    "url-parse": "^1.4.3"
+    "url-parse": "^1.4.3",
+    "webpack-dev-server": "^3.1.14"
   },
   "scripts": {
     "start": "react-scripts start",
